@@ -1,22 +1,4 @@
 package application;
-import java.net.URL;
-import java.util.ResourceBundle;
-
-
-import dao.Task;
-import dao.TaskEmpl;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
-import javafx.scene.control.cell.PropertyValueFactory;
-
 	
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -30,12 +12,10 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-//			Parent root = FXMLLoader.load(getClass().getResource("Task.fxml"));
-			Parent root = FXMLLoader.load(getClass().getResource("LogIn.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("/View/Login.fxml"));
+            Scene scene = new Scene(root,700,400) ;
 			
-			Scene scene = new Scene(root);
-			primaryStage.setTitle("ToDo");
-			
+            primaryStage.setTitle("Todo!");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
